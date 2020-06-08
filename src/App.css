@@ -1,38 +1,94 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: grid;
+  grid-template-rows: 5vh 90vh;
+  gap:1em
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  max-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:white;
+  font-family: 'IM Fell English SC';font-size: 26px;
+  border-bottom: 8%;
+}
+body{
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+body span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body span:nth-child(1) {
+  color: #E45A84;
+  top: 69%;
+  left: 24%;
+  animation-duration: 13.2s;
+  animation-delay: -12.5s;
+  transform-origin: 10vw 1vh;
+  box-shadow: -40vmin 0 11.7855331942vmin currentColor;
+}
+body span:nth-child(2) {
+  color: #FFACAC;
+  top: 55%;
+  left: 87%;
+  animation-duration: 15.4s;
+  animation-delay: -7.4s;
+  transform-origin: 8vw 16vh;
+  box-shadow: 40vmin 0 6.7928860055vmin currentColor;
+}
+body span:nth-child(3) {
+  color: #FFACAC;
+  top: 71%;
+  left: 91%;
+  animation-duration: 12.1s;
+  animation-delay: -14.5s;
+  transform-origin: -13vw 25vh;
+  box-shadow: 40vmin 0 12.2430861549vmin currentColor;
+}
+body span:nth-child(4) {
+  color: #583C87;
+  top: 89%;
+  left: 46%;
+  animation-duration: 12.4s;
+  animation-delay: -5.4s;
+  transform-origin: -20vw 19vh;
+  box-shadow: -40vmin 0 9.0658163322vmin currentColor;
+}
+body span:nth-child(5) {
+  color: #FFACAC;
+  top: 52%;
+  left: 79%;
+  animation-duration: 11.2s;
+  animation-delay: -1.7s;
+  transform-origin: -9vw 2vh;
+  box-shadow: 40vmin 0 7.7437268763vmin currentColor;
+}
+body span:nth-child(6) {
+  color: #FFACAC;
+  top: 8%;
+  left: 17%;
+  animation-duration: 12.5s;
+  animation-delay: -9.5s;
+  transform-origin: -18vw -4vh;
+  box-shadow: 40vmin 0 9.7638879469vmin currentColor;
+}
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
